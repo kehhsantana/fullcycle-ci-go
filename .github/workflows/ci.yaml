@@ -1,14 +1,14 @@
 name: ci-golang-workflow
 on: 
- pull_requests:
-   branches:
-     - develop
+  pull_requests:
+    branches:
+      - develop
 jobs:
   check-application:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-	go: ['1.14','1.15']
+        go: ['1.14','1.15']
     
     steps:
       - uses: actions/checkout@v2
